@@ -27,12 +27,12 @@
         <!--View Controller-->
         <scene sceneID="QLp-IF-k9z">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="Rqu-6I-70h" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="Irs-O8-8fU">
+                <viewController modalPresentationStyle="fullScreen" id="Rqu-6I-70h" customClass="ViewController" customModule="Login_Lab_09_15_22" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Irs-O8-8fU" customClass="View">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-Wf-Mus">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kzm-Wf-Mus" customClass="UsernameTextField">
                                 <rect key="frame" x="83" y="404" width="247" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -56,7 +56,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="LOGIN"/>
                                 <connections>
-                                    <action selector="LoginButton:" destination="isG-VA-rmf" eventType="touchUpInside" id="81U-G7-5PA"/>
+                                    <action selector="LoginButton:" destination="isG-VA-rmf" eventType="touchUpInside" id="5zl-SE-SqO"/>
+                                    <action selector="LoginButton:" destination="Rqu-6I-70h" eventType="touchUpInside" id="nv0-FF-Oyq"/>
                                     <segue destination="LR1-EW-Ccc" kind="show" identifier="loginButton" id="hsK-ZU-L3K"/>
                                 </connections>
                             </button>
@@ -65,18 +66,30 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="FORGOT USERNAME"/>
+                                <connections>
+                                    <action selector="ForgotUsername:" destination="isG-VA-rmf" eventType="touchUpInside" id="Qrf-VW-cU1"/>
+                                    <action selector="ForgotUsername:" destination="Rqu-6I-70h" eventType="touchUpInside" id="vQf-4k-jah"/>
+                                    <segue destination="LR1-EW-Ccc" kind="show" identifier="forgotUsername" id="lol-pv-OM4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKS-Ix-sOL">
                                 <rect key="frame" x="231" y="573" width="163" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="FORGOT PASSWORD"/>
+                                <connections>
+                                    <action selector="ForgotPassword:" destination="isG-VA-rmf" eventType="touchUpInside" id="dpb-on-5j2"/>
+                                    <action selector="ForgotPassword:" destination="Rqu-6I-70h" eventType="touchUpInside" id="oWa-ht-UnB"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="gF4-q5-I4D"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" largeTitleDisplayMode="always" id="tqX-8a-Edc"/>
+                    <connections>
+                        <outlet property="UsernameTextFieldEntered" destination="Kzm-Wf-Mus" id="NaJ-fi-cpT"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4XS-FS-Ggj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="isG-VA-rmf" userLabel="Exit" sceneMemberID="exit"/>
