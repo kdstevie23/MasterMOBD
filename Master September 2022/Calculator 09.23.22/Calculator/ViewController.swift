@@ -14,13 +14,13 @@ class ViewController: UIViewController {
     var firstNumber = ""
     var secondNumber = ""
     var opperand = ""
+    var total = ""
 //    var total = ""
     @IBOutlet weak var clearButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
     }
-    
     
     
     
@@ -55,8 +55,31 @@ class ViewController: UIViewController {
     
     @IBAction func functionsOfMath(_ sender: UIButton) {
         
-        let negativeplusequation = "-\(starterNumberLabel.text!)"
         
+        var negativeplusequation = Int(starterNumberLabel.text!)
+        
+        func equationNegativePositive() -> Int {
+            if negativeplusequation! > 0 {
+                negativeplusequation! = (negativeplusequation! * (-1))
+            } else if negativeplusequation! < 0 {
+                negativeplusequation! = (negativeplusequation! * (-1))
+            }
+            return negativeplusequation!
+        }
+        
+        
+        var realTotal = Int(total)
+        
+        func equationNegativePositiveTotal() -> Int {
+            if realTotal! > 0 {
+                realTotal! = (realTotal! * (-1))
+            } else if (realTotal! < 0) {
+                realTotal! = (realTotal! * (-1))
+            }
+            return realTotal!
+        }
+        
+    
 
 
         guard let starter = Double(starterNumberLabel.text!) else { return }
@@ -67,10 +90,14 @@ class ViewController: UIViewController {
         case "AC":
             firstNumber = ""
             secondNumber = ""
+            total = ""
             starterNumberLabel.text = "0"
         
         case "+/-":
-            starterNumberLabel.text = "\(negativeplusequation)"
+            
+            equationNegativePositive()
+            starterNumberLabel.text! = String(negativeplusequation!)
+            
         case "%":
             starterNumberLabel.text = "\(starter / 100)"
         case "÷":
@@ -132,7 +159,9 @@ class ViewController: UIViewController {
                 self.firstNumber = String(total)
             }
            
-        
+            total = starterNumberLabel.text!
+            
+            starterNumberLabel.text = String(total)
             print("Enter")
             
             default:
