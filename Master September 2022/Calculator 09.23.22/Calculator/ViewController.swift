@@ -49,9 +49,8 @@ class ViewController: UIViewController {
     var doingDivisionWhenPressed: Double = 0.0
     
     
-    
-    
-    
+  
+   
     
     @IBAction func functionsOfMath(_ sender: UIButton) {
         
