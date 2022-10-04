@@ -20,8 +20,7 @@ class ViewController: UIViewController {
         
         var names = ["Tammy", "Cole"]
         names.removeFirst()
-        names.removeFirst()
-        names.removeFirst()
+        print(names)
         // Do any additional setup after loading the view.
     }
 

@@ -31,66 +31,125 @@ class ViewController: UIViewController {
         self.view.sendSubviewToBack(imageView)
     }
     
+    //==============DESIGN AND LAYOUT ON VIEW DID LOAD==================
+    //==================================================================
+    //==================================================================
+    //==================================================================
+    //==================================================================
+    //==================================================================
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var passwordLabel: UILabel!
+    @IBOutlet weak var RealPasswordUIText: UITextField!
+    @IBOutlet weak var errorLabel: UILabel!
     
-    func containsSpecialCharacter(password: String?) -> Bool {
-        guard let password = password else { return false }
-        
-        let regex = ".*[^A-Za-z0-9].*"
-        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
-        return testString.evaluate(with: password)
+
+    
+    public func isValidPassword(password: String) -> Bool
+    {
+        let passwordRegex = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[$@$!%*?&#])[A-Za-z\\d$@$!%*?&#]{8,}"
+        return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: password)
     }
     
-    func containsUppercaseCharacter(password: String?) -> Bool {
-        guard let password = password else { return false }
-        
-        let regex = ".*[^a-z0-9].*"
-        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
-        return testString.evaluate(with: password)
-    }
     
-    func containsNumberCharacter(password: String?) -> Bool {
-        guard let password = password else { return false }
-        
-        let regex = ".*[^A-Za-z].*"
-        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
-        return testString.evaluate(with: password)
-    }
+    @IBAction func passwordTextFieldAct(_ sender: Any)
     
-    let viewController2 = ViewController2()
-    
-    @IBAction public func login() {
-        guard let password = passwordLabel.text else {return}
-        
-        if passwordLabel.text!.count < 8
-        {
-            print("error")
+    {
+        guard let passwordTwo = RealPasswordUIText.text else { return }
+        if isValidPassword(password: passwordTwo) {
+            errorLabel.text = ""
         }
-        
-        //List each way this can fail
-        else if !containsSpecialCharacter(password: passwordLabel.text)
-        {
-            print("error")
-        }
-        
-        
-        else if !containsUppercaseCharacter(password: passwordLabel.text)
-        {
-            print("error")
-        }
-        
-        else if !containsNumberCharacter(password: passwordLabel.text)
-        {
-            print("error")
-        }
-        
         else
         {
-        self.navigationController?.pushViewController(viewController2, animated: true)
+            errorLabel.text = "HEY STUPID! PUT A CAPITOL AND SPECIAL CHARACTER"
+        }
+    }
+    
+
+    let viewController2 = ViewController2()
+    
+    
+    
+    @IBAction public func login()
+    {
+        guard let forPassword = RealPasswordUIText.text else { return }
+        if isValidPassword(password: forPassword)
+        {
+            self.navigationController?.pushViewController(viewController2, animated: true)
+        }
+        else
+        {
+            errorLabel.text = "Error"
+            errorLabel.textColor = .red
         }
     }
 }
+
+
+
+
+
+
+
+
+
+//    func containsSpecialCharacter(password: String?) -> Bool {
+//        guard let password = password else { return false }
+//        return password.containsSpecialCharacterVar
+//    }
+//
+
+
+
+//    func containsUppercaseCharacter(password: String?) -> Bool {
+//        guard let password = password else { return false }
+//
+//        let regex = ".*[^a-z0-9].*"
+//        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
+//        return testString.evaluate(with: password)
+//    }
+//
+//    func containsNumberCharacter(password: String?) -> Bool {
+//        guard let password = password else { return false }
+//
+//        let regex = ".*[^A-Za-z].*"
+//        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
+//        return testString.evaluate(with: password)
+//    }
+//
+//
+//        if passwordTextField.text!.count < 8
+//        {
+//            print("error")
+//        }
+//
+//        //List each way this can fail
+//        else if !containsSpecialCharacter(password: passwordLabel.text)
+//        {
+//            print("error")
+//        }
+//
+//
+//        else if !containsUppercaseCharacter(password: passwordLabel.text)
+//        {
+//            print("error")
+//        }
+//
+//        else if !containsNumberCharacter(password: passwordLabel.text)
+//        {
+//            print("error")
+//        }
 
 //if it doesn't have a number then fail
 
@@ -98,3 +157,14 @@ class ViewController: UIViewController {
 
 //if you made it this far, you succeeded
 //present alert or push viewcontroller
+
+
+//extension String {
+//    var containsSpecialCharacterVar: Bool {
+//        let regex = "/^(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9!@#$%^&*]{8,16}$/"
+//        let testString = NSPredicate(format:"SELF MATCHES %@", regex)
+//
+//
+//        return testString.evaluate(with: self)
+//    }
+//}

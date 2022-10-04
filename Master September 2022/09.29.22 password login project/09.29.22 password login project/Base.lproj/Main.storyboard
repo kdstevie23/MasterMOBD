@@ -64,13 +64,21 @@
                                     <action selector="login" destination="Xab-Bi-q9u" eventType="touchUpInside" id="DY5-J9-FMw"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="YOU STUPID IDIOT PUT A CAPITOL AND SPECIAL CHARACTER MF" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fyj-ZJ-aYh">
+                                <rect key="frame" x="20" y="739" width="678" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zdX-Ym-xst"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="zdX-Ym-xst" firstAttribute="trailing" secondItem="yhd-Jw-OMR" secondAttribute="trailing" constant="20" id="808-bL-C1S"/>
+                            <constraint firstItem="zdX-Ym-xst" firstAttribute="trailing" secondItem="fyj-ZJ-aYh" secondAttribute="trailing" constant="20" id="9uO-Zt-cjK"/>
                             <constraint firstItem="Dfx-e1-1W7" firstAttribute="leading" secondItem="zdX-Ym-xst" secondAttribute="leading" constant="20" id="A6x-FY-fkA"/>
                             <constraint firstItem="FTf-sh-uuE" firstAttribute="top" secondItem="yhd-Jw-OMR" secondAttribute="bottom" constant="26" id="BIy-Ev-78s"/>
+                            <constraint firstItem="fyj-ZJ-aYh" firstAttribute="leading" secondItem="zdX-Ym-xst" secondAttribute="leading" constant="20" id="CqI-B1-40g"/>
                             <constraint firstItem="C5E-1F-qK8" firstAttribute="leading" secondItem="zdX-Ym-xst" secondAttribute="leading" constant="68" id="GEJ-Fv-QGv"/>
                             <constraint firstItem="C5E-1F-qK8" firstAttribute="top" secondItem="zdX-Ym-xst" secondAttribute="top" constant="75" id="IvJ-K5-3SZ"/>
                             <constraint firstItem="4hM-T7-gbr" firstAttribute="top" secondItem="FTf-sh-uuE" secondAttribute="bottom" constant="15" id="Jme-gL-pWx"/>
@@ -78,6 +86,7 @@
                             <constraint firstItem="4hM-T7-gbr" firstAttribute="top" secondItem="FTf-sh-uuE" secondAttribute="bottom" constant="15" id="KvH-wU-QSY"/>
                             <constraint firstItem="Xit-DD-Y8I" firstAttribute="leading" secondItem="zdX-Ym-xst" secondAttribute="leading" constant="20" id="LnN-NQ-hcN"/>
                             <constraint firstItem="Xit-DD-Y8I" firstAttribute="top" secondItem="C5E-1F-qK8" secondAttribute="bottom" constant="27" id="NWE-0i-Fmr"/>
+                            <constraint firstItem="fyj-ZJ-aYh" firstAttribute="top" secondItem="Dfx-e1-1W7" secondAttribute="bottom" constant="15" id="OJX-2a-9Kt"/>
                             <constraint firstItem="zdX-Ym-xst" firstAttribute="trailing" secondItem="Xit-DD-Y8I" secondAttribute="trailing" constant="20" id="RNd-6g-8P9"/>
                             <constraint firstItem="yhd-Jw-OMR" firstAttribute="top" secondItem="Xit-DD-Y8I" secondAttribute="bottom" constant="15" id="Vid-6O-Oto"/>
                             <constraint firstItem="Dfx-e1-1W7" firstAttribute="top" secondItem="4hM-T7-gbr" secondAttribute="bottom" constant="56.5" id="mS6-EO-oyR"/>
@@ -91,6 +100,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="syf-fB-x9Q"/>
                     <connections>
+                        <outlet property="RealPasswordUIText" destination="4hM-T7-gbr" id="dca-5v-TjG"/>
+                        <outlet property="errorLabel" destination="fyj-ZJ-aYh" id="gyv-Bd-j2h"/>
                         <outlet property="passwordLabel" destination="FTf-sh-uuE" id="gEq-LI-Ggw"/>
                         <outlet property="usernameLabel" destination="Xit-DD-Y8I" id="Lpp-kA-QeJ"/>
                     </connections>
