@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		C265198228EB35E900B651C2 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = C265198128EB35E900B651C2 /* File.swift */; };
 		C2ECDA7B28D8C9F500A8EAE2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA7A28D8C9F500A8EAE2 /* AppDelegate.swift */; };
 		C2ECDA7D28D8C9F500A8EAE2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA7C28D8C9F500A8EAE2 /* SceneDelegate.swift */; };
 		C2ECDA7F28D8C9F500A8EAE2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2ECDA7E28D8C9F500A8EAE2 /* ViewController.swift */; };
@@ -37,7 +36,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		C265198128EB35E900B651C2 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = File.swift; path = "../../09.03.22 Pages Lab/File.swift"; sourceTree = "<group>"; };
 		C2ECDA7728D8C9F500A8EAE2 /* GettingStarted.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GettingStarted.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2ECDA7A28D8C9F500A8EAE2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C2ECDA7C28D8C9F500A8EAE2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -81,7 +79,6 @@
 		C2ECDA6E28D8C9F500A8EAE2 = {
 			isa = PBXGroup;
 			children = (
-				C265198128EB35E900B651C2 /* File.swift */,
 				C2ECDA7928D8C9F500A8EAE2 /* GettingStarted */,
 				C2ECDA9028D8C9F700A8EAE2 /* GettingStartedTests */,
 				C2ECDA9A28D8C9F700A8EAE2 /* GettingStartedUITests */,
@@ -262,7 +259,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2ECDA7F28D8C9F500A8EAE2 /* ViewController.swift in Sources */,
-				C265198228EB35E900B651C2 /* File.swift in Sources */,
 				C2ECDA7B28D8C9F500A8EAE2 /* AppDelegate.swift in Sources */,
 				C2ECDA7D28D8C9F500A8EAE2 /* SceneDelegate.swift in Sources */,
 			);
@@ -454,7 +450,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sept-2022.GettingStarted";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettingstarted.stevie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -482,7 +478,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "sept-2022.GettingStarted";
+				PRODUCT_BUNDLE_IDENTIFIER = com.gettingstarted.stevie;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
