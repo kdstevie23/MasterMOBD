@@ -2,7 +2,7 @@
 //  QuestionViewController.swift
 //  PersonalityQuiz
 //
-//  Created by mac on 9/30/22.
+//  Created by Steven Newman on 9/30/22.
 //
 
 import UIKit
