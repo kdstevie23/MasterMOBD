@@ -19,6 +19,7 @@
 		C2556AFC291ABED700015665 /* ScoreBoardTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2556AFB291ABED700015665 /* ScoreBoardTests.swift */; };
 		C2556B06291ABED700015665 /* ScoreBoardUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2556B05291ABED700015665 /* ScoreBoardUITests.swift */; };
 		C2556B08291ABED700015665 /* ScoreBoardUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2556B07291ABED700015665 /* ScoreBoardUITestsLaunchTests.swift */; };
+		C2685B1829249EBD009D2CE9 /* SB.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2685B1729249EBD009D2CE9 /* SB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		C2556B01291ABED700015665 /* ScoreBoardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScoreBoardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C2556B05291ABED700015665 /* ScoreBoardUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardUITests.swift; sourceTree = "<group>"; };
 		C2556B07291ABED700015665 /* ScoreBoardUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreBoardUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		C2685B1729249EBD009D2CE9 /* SB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				C232A61D291AC49300F127A2 /* ScoreBoardTableViewController.swift */,
 				C232A621291C14E300F127A2 /* ScoreTableViewCell.swift */,
 				C232A61F291C068000F127A2 /* AddPlayerVC.swift */,
+				C2685B1729249EBD009D2CE9 /* SB.swift */,
 				C2556AED291ABED700015665 /* Assets.xcassets */,
 				C2556AF2291ABED700015665 /* Info.plist */,
 			);
@@ -269,6 +272,7 @@
 			files = (
 				C232A620291C068000F127A2 /* AddPlayerVC.swift in Sources */,
 				C2556AE9291ABED600015665 /* ViewController.swift in Sources */,
+				C2685B1829249EBD009D2CE9 /* SB.swift in Sources */,
 				C232A61E291AC49300F127A2 /* ScoreBoardTableViewController.swift in Sources */,
 				C2556AE5291ABED600015665 /* AppDelegate.swift in Sources */,
 				C232A622291C14E300F127A2 /* ScoreTableViewCell.swift in Sources */,

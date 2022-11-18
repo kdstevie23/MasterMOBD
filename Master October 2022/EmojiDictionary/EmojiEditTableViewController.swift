@@ -26,7 +26,7 @@ class EmojiEditTableViewController: UITableViewController {
     }
     
     required init?(coder: NSCoder) {
-        super.init(coder: )
+        super.init(coder: coder)
     }
     var emoji: Emoji?
     

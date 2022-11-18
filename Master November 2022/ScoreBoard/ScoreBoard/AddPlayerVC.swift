@@ -8,15 +8,16 @@
 import UIKit
 
 
-protocol MyDataSendingDelegateProtocol {
-    func sendDataToFirstViewController(myData: String)
+
+protocol ReceiveDataFromAddNewPlayer {
+    func scoreBoardTableViewControllerDelegate(newPlayer: Player)
 }
 
 
 
+
+
 class AddPlayerVC: UIViewController {
-    
-    var delegate: MyDataSendingDelegateProtocol? = nil
     
     @IBOutlet weak var PlayerNumberTextField: UITextField!
     @IBOutlet weak var ScoreTextField: UITextField!
@@ -24,17 +25,6 @@ class AddPlayerVC: UIViewController {
     
     
     
-    @IBAction func SaveAndAddButton(_ sender: UIButton) {
-        if self.delegate != nil && self.PlayerNumberTextField.text != nil {
-            let dataToBeSent = self.PlayerNumberTextField.text
-            self.delegate?.sendDataToFirstViewController(myData: dataToBeSent!)
-                    dismiss(animated: true, completion: nil)
-                }
-            }
-    
-    
-    
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -43,6 +33,43 @@ class AddPlayerVC: UIViewController {
    
     
     
+    var delegate: ReceiveDataFromAddNewPlayer?
+    var newPlayer: Player?
+    
+    
+    
+    func updateView() {
+        if let newPlayer = newPlayer {
+            PlayerNumberTextField.text = newPlayer.playerName
+            ScoreTextField.text = String(newPlayer.currentScore)
+            
+        }
+    }
+    
+    
+    
+    @IBAction func SaveAndAddButton(_ sender: Any)
+{
+        
+        guard let playerName = PlayerNumberTextField.text, let currentScore = ScoreTextField.text else
+        { return }
+        
+        
+        
+        self.delegate?.scoreBoardTableViewControllerDelegate(newPlayer: Player(playerName: playerName, currentScore: Int(currentScore) ?? 0))
+        
+        
+        self.dismiss(animated: false)
+                }
+    
+}
+    
+    
     
 
-}
+  
+    
+    
+    
+
+

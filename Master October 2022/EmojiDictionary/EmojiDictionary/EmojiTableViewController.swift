@@ -2,7 +2,7 @@
 //  EmojiTableViewController.swift
 //  EmojiDictionary
 //
-//  Created by Zander Ewell on 10/18/22.
+//  Created by Zander Edited by Stevie for educational purposes
 //
 
 import UIKit
@@ -14,6 +14,7 @@ class EmojiTableViewController: UITableViewController {
         Emoji(symbol: "😕", name: "Confused Face", description: "A confused, puzzled face.", usage: "unsure what to think; displeasure"),
         Emoji(symbol: "😍", name: "Heart Eyes", description: "A smiley face with hearts for eyes.", usage: "love of something; attractive"),
         Emoji(symbol: "🧑‍💻", name: "Developer", description: "A person working on a MacBook (probably using Xcode to write iOS apps in Swift).", usage: "apps, software, programming"),
+        Emoji(symbol: "👧🏼", name: "Stevie's Girlfriend", description: "Stevies Girlfriend", usage: "Girl who dates any guy cause shes desperate"),
         Emoji(symbol: "🐢", name: "Turtle", description: "A cute turtle.", usage: "something slow"),
         Emoji(symbol: "🐘", name: "Elephant", description: "A gray elephant.", usage: "good memory"),
         Emoji(symbol: "🍝", name: "Spaghetti", description: "A plate of spaghetti.", usage: "spaghetti"),
@@ -22,8 +23,7 @@ class EmojiTableViewController: UITableViewController {
         Emoji(symbol: "📚", name: "Stack of Books",description: "Three colored books stacked on each other.", usage: "homework, studying"),
         Emoji(symbol: "💔", name: "Broken Heart", description: "A red, broken heart.", usage: "extreme sadness"), Emoji(symbol: "💤", name: "Snore", description: "Three blue \'z\'s.", usage: "tired, sleepiness"),
         Emoji(symbol: "🏁", name: "Checkered Flag", description: "A black-and-white checkered flag.", usage: "completion"),
-        Emoji(symbol: "😤", name: "hurtz donut", description: "gonna get butt kicked if you no listen emoji", usage: "mad and someone isnt listening"),
-        Emoji(symbol: "👧🏼", name: "Zander's Girlfriend", description: "Zander's Girlfriend", usage: "Girl who dates Zander")
+        Emoji(symbol: "😤", name: "hurtz donut", description: "gonna get butt kicked if you no listen emoji", usage: "mad and someone isnt listening")
     ]
     
     override func viewDidLoad() {
