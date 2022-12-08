@@ -37,6 +37,11 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
         }
     }
     
+    
+    
+    
+    
+    
     // MARK: - Navigation
     
     @IBSegueAction func showEmployeeDetail(_ coder: NSCoder, sender: Any?) -> EmployeeDetailTableViewController? {
@@ -57,18 +62,30 @@ class EmployeeListTableViewController: UITableViewController, EmployeeDetailTabl
         return detailViewController
     }
     
-    @IBAction func unwindToEmployeeList(segue: UIStoryboardSegue) {
+    @IBAction func unwindToEmployeeList(segue: UIStoryboardSegue)
+    {
         tableView.reloadData()
     }
     
+    
+    
+    
+    
+    
+    
+    
+    
     // MARK: - EmployeeDetailTableViewControllerDelegate
     
-    func employeeDetailTableViewController(_ controller: EmployeeDetailTableViewController, didSave employee: Employee) {
+    func employeeDetailTableViewController(_ controller: EmployeeDetailTableViewController, didSave employee: Employee)
+    {
         
-        if let indexPath = tableView.indexPathForSelectedRow {
+        if let indexPath = tableView.indexPathForSelectedRow
+        {
             employees.remove(at: indexPath.row)
             employees.insert(employee, at: indexPath.row)
-        } else {
+        } else
+        {
             employees.append(employee)
         }
         

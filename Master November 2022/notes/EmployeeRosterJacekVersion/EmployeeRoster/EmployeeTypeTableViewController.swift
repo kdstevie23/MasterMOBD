@@ -1,8 +1,7 @@
 //
 //  EmployeeTypeTableViewController.swift
 //  EmployeeRoster
-//
-//  Created by Jacek Yates on 3/9/22.
+//  Created by Jacek Yates and modified by stevie with jacek supervision on 11/18/22.
 //
 
 import UIKit
@@ -11,34 +10,31 @@ protocol EmployeeTypeTableViewControllerDelegate {
     func employeeTypeTableViewController(_:EmployeeTypeTableViewController, didSelect: EmployeeType)
 }
 
-class EmployeeTypeTableViewController: UITableViewController {
+class EmployeeTypeTableViewController: UITableViewController
+{
 
     var delegate: EmployeeTypeTableViewControllerDelegate?
     var selectedEmployeeType: EmployeeType?
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
     }
 
-    // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
+    override func numberOfSections(in tableView: UITableView) -> Int
+    {
         return 1
     }
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
         return EmployeeType.allCases.count
     }
 
     
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
+    {
         let cell = tableView.dequeueReusableCell(withIdentifier: "EmployeeCell", for: indexPath)
 
         let type = EmployeeType.allCases[indexPath.row]
@@ -47,16 +43,19 @@ class EmployeeTypeTableViewController: UITableViewController {
         content.text = type.description
         cell.contentConfiguration = content
         
-        if selectedEmployeeType == type {
+        if selectedEmployeeType == type
+        {
             cell.accessoryType = .checkmark
-        } else {
+        } else
+        {
             cell.accessoryType = .none
         }
 
         return cell
     }
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
+    {
         selectedEmployeeType = EmployeeType.allCases[indexPath.row]
         tableView.reloadData()
         guard let selectedType = selectedEmployeeType else {return}

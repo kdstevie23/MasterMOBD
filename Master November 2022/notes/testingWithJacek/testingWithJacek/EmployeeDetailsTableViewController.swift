@@ -16,13 +16,18 @@ protocol EmployeeDetailsTableViewControllerDelegate: AnyObject
 
 class EmployeeDetailsTableViewController: UITableViewController, UITextFieldDelegate, EmployeeTypeTableViewControllerDelegate
 {
+    func employeeTypeTableViewController(_: SelectingEmployeeTypeTableController, didSelect: EmployeeType) {
+        <#code#>
+    }
+    
+   
+    
+    
     
     
     
     @IBOutlet weak var employeeTypeOutlet: UILabel!
-  
     @IBOutlet weak var nameTextField: UITextField!
-    
     @IBOutlet weak var DOBTextField: UILabel!
     
     
