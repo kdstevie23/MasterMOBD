@@ -9,17 +9,19 @@
 /* Begin PBXBuildFile section */
 		C262B576293F953900637A79 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B575293F953900637A79 /* AppDelegate.swift */; };
 		C262B578293F953900637A79 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B577293F953900637A79 /* SceneDelegate.swift */; };
-		C262B57A293F953900637A79 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B579293F953900637A79 /* ViewController.swift */; };
+		C262B57A293F953900637A79 /* DogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B579293F953900637A79 /* DogViewController.swift */; };
 		C262B57D293F953900637A79 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C262B57B293F953900637A79 /* Main.storyboard */; };
 		C262B57F293F953B00637A79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C262B57E293F953B00637A79 /* Assets.xcassets */; };
 		C262B582293F953B00637A79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C262B580293F953B00637A79 /* LaunchScreen.storyboard */; };
 		C262B58D293F953B00637A79 /* dogAPIprojectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B58C293F953B00637A79 /* dogAPIprojectTests.swift */; };
 		C262B597293F953B00637A79 /* dogAPIprojectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B596293F953B00637A79 /* dogAPIprojectUITests.swift */; };
 		C262B599293F953B00637A79 /* dogAPIprojectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B598293F953B00637A79 /* dogAPIprojectUITestsLaunchTests.swift */; };
-		C262B5A8293FAA3700637A79 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B5A7293FAA3700637A79 /* Item.swift */; };
+		C262B5A8293FAA3700637A79 /* DogInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B5A7293FAA3700637A79 /* DogInfo.swift */; };
 		C262B5AA2940E94900637A79 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B5A92940E94900637A79 /* TableViewCell.swift */; };
 		C262B5AE2940ED8300637A79 /* repPeople.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B5AD2940ED8300637A79 /* repPeople.swift */; };
-		C262B5B02940F2C700637A79 /* TableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C262B5AF2940F2C700637A79 /* TableViewController.swift */; };
+		C2F69AF72943A5CA00DF7D25 /* repController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F69AF62943A5CA00DF7D25 /* repController.swift */; };
+		C2F69AF92943A78900DF7D25 /* dogInfoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F69AF82943A78900DF7D25 /* dogInfoController.swift */; };
+		C2F69B1E294902CA00DF7D25 /* RepTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2F69B1D294902CA00DF7D25 /* RepTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,7 +45,7 @@
 		C262B572293F953900637A79 /* dogAPIproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dogAPIproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C262B575293F953900637A79 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C262B577293F953900637A79 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		C262B579293F953900637A79 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		C262B579293F953900637A79 /* DogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogViewController.swift; sourceTree = "<group>"; };
 		C262B57C293F953900637A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C262B57E293F953B00637A79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C262B581293F953B00637A79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -53,10 +55,12 @@
 		C262B592293F953B00637A79 /* dogAPIprojectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dogAPIprojectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C262B596293F953B00637A79 /* dogAPIprojectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogAPIprojectUITests.swift; sourceTree = "<group>"; };
 		C262B598293F953B00637A79 /* dogAPIprojectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogAPIprojectUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		C262B5A7293FAA3700637A79 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		C262B5A7293FAA3700637A79 /* DogInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogInfo.swift; sourceTree = "<group>"; };
 		C262B5A92940E94900637A79 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		C262B5AD2940ED8300637A79 /* repPeople.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repPeople.swift; sourceTree = "<group>"; };
-		C262B5AF2940F2C700637A79 /* TableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewController.swift; sourceTree = "<group>"; };
+		C2F69AF62943A5CA00DF7D25 /* repController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = repController.swift; sourceTree = "<group>"; };
+		C2F69AF82943A78900DF7D25 /* dogInfoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dogInfoController.swift; sourceTree = "<group>"; };
+		C2F69B1D294902CA00DF7D25 /* RepTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +111,11 @@
 		C262B574293F953900637A79 /* dogAPIproject */ = {
 			isa = PBXGroup;
 			children = (
-				C262B575293F953900637A79 /* AppDelegate.swift */,
 				C262B577293F953900637A79 /* SceneDelegate.swift */,
-				C262B579293F953900637A79 /* ViewController.swift */,
-				C262B5A7293FAA3700637A79 /* Item.swift */,
+				C262B575293F953900637A79 /* AppDelegate.swift */,
 				C262B57B293F953900637A79 /* Main.storyboard */,
-				C262B5AD2940ED8300637A79 /* repPeople.swift */,
-				C262B5A92940E94900637A79 /* TableViewCell.swift */,
-				C262B5AF2940F2C700637A79 /* TableViewController.swift */,
+				C2F69B192948E5C500DF7D25 /* Dog */,
+				C2F69B1A2948E5DA00DF7D25 /* Rep */,
 				C262B57E293F953B00637A79 /* Assets.xcassets */,
 				C262B580293F953B00637A79 /* LaunchScreen.storyboard */,
 				C262B583293F953B00637A79 /* Info.plist */,
@@ -137,6 +138,27 @@
 				C262B598293F953B00637A79 /* dogAPIprojectUITestsLaunchTests.swift */,
 			);
 			path = dogAPIprojectUITests;
+			sourceTree = "<group>";
+		};
+		C2F69B192948E5C500DF7D25 /* Dog */ = {
+			isa = PBXGroup;
+			children = (
+				C262B579293F953900637A79 /* DogViewController.swift */,
+				C262B5A7293FAA3700637A79 /* DogInfo.swift */,
+				C2F69AF82943A78900DF7D25 /* dogInfoController.swift */,
+			);
+			path = Dog;
+			sourceTree = "<group>";
+		};
+		C2F69B1A2948E5DA00DF7D25 /* Rep */ = {
+			isa = PBXGroup;
+			children = (
+				C262B5AD2940ED8300637A79 /* repPeople.swift */,
+				C262B5A92940E94900637A79 /* TableViewCell.swift */,
+				C2F69AF62943A5CA00DF7D25 /* repController.swift */,
+				C2F69B1D294902CA00DF7D25 /* RepTableViewController.swift */,
+			);
+			path = Rep;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -271,10 +293,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				C262B5AA2940E94900637A79 /* TableViewCell.swift in Sources */,
-				C262B5B02940F2C700637A79 /* TableViewController.swift in Sources */,
-				C262B5A8293FAA3700637A79 /* Item.swift in Sources */,
+				C2F69AF72943A5CA00DF7D25 /* repController.swift in Sources */,
+				C2F69AF92943A78900DF7D25 /* dogInfoController.swift in Sources */,
+				C2F69B1E294902CA00DF7D25 /* RepTableViewController.swift in Sources */,
+				C262B5A8293FAA3700637A79 /* DogInfo.swift in Sources */,
 				C262B5AE2940ED8300637A79 /* repPeople.swift in Sources */,
-				C262B57A293F953900637A79 /* ViewController.swift in Sources */,
+				C262B57A293F953900637A79 /* DogViewController.swift in Sources */,
 				C262B576293F953900637A79 /* AppDelegate.swift in Sources */,
 				C262B578293F953900637A79 /* SceneDelegate.swift in Sources */,
 			);

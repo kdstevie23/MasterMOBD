@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qHS-Wk-OWE">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--RANDOMIZER-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="tableViewRandomizerApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BKd-9G-yQX">
+                                <rect key="frame" x="0.0" y="163" width="390" height="216"/>
+                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nVa-jU-cvY">
+                                <rect key="frame" x="129" y="405" width="134" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="GET RANDOM"/>
+                                <connections>
+                                    <action selector="getRandomButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="NVN-E9-ub1"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zJI-dl-zOe">
+                                <rect key="frame" x="58" y="121" width="274" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="IFh-bf-jT1">
+                                <rect key="frame" x="0.0" y="448" width="390" height="136"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="RandomNameCell" id="YMZ-pK-WLD" customClass="TableViewCell" customModule="tableViewRandomizerApp" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="390" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YMZ-pK-WLD" id="nPm-9x-dTV">
+                                            <rect key="frame" x="0.0" y="0.0" width="390" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZcE-YS-2Xf">
+                                <rect key="frame" x="164" y="775" width="63" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="reset"/>
+                                <connections>
+                                    <action selector="resetButtonTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HQy-vu-odm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZcE-YS-2Xf" firstAttribute="top" secondItem="IFh-bf-jT1" secondAttribute="bottom" constant="191" id="2Mh-cj-o1b"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nVa-jU-cvY" secondAttribute="trailing" constant="127" id="8YF-HE-a7i"/>
+                            <constraint firstItem="zJI-dl-zOe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="Bsv-rv-bsn"/>
+                            <constraint firstItem="IFh-bf-jT1" firstAttribute="top" secondItem="nVa-jU-cvY" secondAttribute="bottom" constant="8" symbolic="YES" id="IOK-jY-fJW"/>
+                            <constraint firstItem="BKd-9G-yQX" firstAttribute="top" secondItem="zJI-dl-zOe" secondAttribute="bottom" constant="8" symbolic="YES" id="Llw-Fd-hSw"/>
+                            <constraint firstItem="nVa-jU-cvY" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="N4p-Eh-33L"/>
+                            <constraint firstItem="BKd-9G-yQX" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="OZ5-A2-6QR"/>
+                            <constraint firstItem="ZcE-YS-2Xf" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="QZw-JX-1YP"/>
+                            <constraint firstItem="IFh-bf-jT1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Tig-qu-W2m"/>
+                            <constraint firstItem="IFh-bf-jT1" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="WmG-TY-rYd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zJI-dl-zOe" secondAttribute="trailing" constant="58" id="bgZ-yw-pBb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="ZcE-YS-2Xf" secondAttribute="trailing" constant="163" id="cFE-I5-f1f"/>
+                            <constraint firstItem="zJI-dl-zOe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="58" id="dSG-Ml-6Dj"/>
+                            <constraint firstItem="ZcE-YS-2Xf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="164" id="nux-mg-rjg"/>
+                            <constraint firstItem="BKd-9G-yQX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wZB-L5-dic"/>
+                            <constraint firstItem="nVa-jU-cvY" firstAttribute="top" secondItem="BKd-9G-yQX" secondAttribute="bottom" constant="26" id="yX8-8J-39a"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="RANDOMIZER" id="4lO-ic-6Zg"/>
+                    <connections>
+                        <outlet property="namePickerView" destination="BKd-9G-yQX" id="hgF-O4-4HN"/>
+                        <outlet property="nameTextField" destination="zJI-dl-zOe" id="uab-Qa-Gbo"/>
+                        <outlet property="tableView" destination="IFh-bf-jT1" id="bf7-3i-waN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="886.15384615384608" y="3.5545023696682461"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qdn-iG-7T7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qHS-Wk-OWE" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="uER-vr-9UX">
+                        <rect key="frame" x="0.0" y="47" width="390" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="H9j-bH-nvc"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dug-aZ-8XF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-43.076923076923073" y="3.5545023696682461"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

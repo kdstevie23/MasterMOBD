@@ -1,32 +1,32 @@
 //
-//  dogAPIprojectUITestsLaunchTests.swift
-//  dogAPIprojectUITests
+//dogAPIprojectUITestsLaunchTests.swift
+//dogAPIprojectUITests
 //
-//  Created by Steven Newman on 12/6/22.
+//CreatedbyStevenNewmanon12/6/22.
 //
 
-import XCTest
+importXCTest
 
-final class dogAPIprojectUITestsLaunchTests: XCTestCase {
+finalclassdogAPIprojectUITestsLaunchTests:XCTestCase{
 
-    override class var runsForEachTargetApplicationUIConfiguration: Bool {
-        true
-    }
+overrideclassvarrunsForEachTargetApplicationUIConfiguration:Bool{
+true
+}
 
-    override func setUpWithError() throws {
-        continueAfterFailure = false
-    }
+overridefuncsetUpWithError()throws{
+continueAfterFailure=false
+}
 
-    func testLaunch() throws {
-        let app = XCUIApplication()
-        app.launch()
+functestLaunch()throws{
+letapp=XCUIApplication()
+app.launch()
 
-        // Insert steps here to perform after app launch but before taking a screenshot,
-        // such as logging into a test account or navigating somewhere in the app
+//Insertstepsheretoperformafterapplaunchbutbeforetakingascreenshot,
+//suchasloggingintoatestaccountornavigatingsomewhereintheapp
 
-        let attachment = XCTAttachment(screenshot: app.screenshot())
-        attachment.name = "Launch Screen"
-        attachment.lifetime = .keepAlways
-        add(attachment)
-    }
+letattachment=XCTAttachment(screenshot:app.screenshot())
+attachment.name="LaunchScreen"
+attachment.lifetime=.keepAlways
+add(attachment)
+}
 }
