@@ -1,4 +1,4 @@
-//
+
 //  ContentView.swift
 //  testing
 //
@@ -7,25 +7,92 @@
 
 import SwiftUI
 
-//struct ContentView: View {
-//    var body: some View {
-//        VStack {
-//            Image(systemName: "globe")
-//                .imageScale(.large)
-//                .foregroundColor(.accentColor)
-//            Text("Hello, world!")
-//        }
-//        .padding()
-//    }
-//}
-   
 struct ContentView: View {
-    @State var data: [[String]] = [["Cell 1"], ["Cell 2"]]
-    @State var isSectionHidden: [Bool] = [false, false]
-    @State var profileCellTitle: String = "Profile Cell"
-
+    @State private var profileCellTitle: String = "Profile Cell"
+    @State private var showListTab: Bool = false
+    @State private var listTabData: [[String]] = []
+    @State private var isListTabSectionHidden: [Bool] = []
+    @State private var savedListData: [String] = []
+    @State private var selection = 0
+       
+       // Section 2
+       @State private var data: [[String]] = [["Cell 1"], ["Cell 2"]]
+       @State private var isSectionHidden: [Bool] = [false, false]
+       @State private var arrow: [String] = ["▽", "△"]
+       @State private var selectedArrow: String = "test"
+       
+       // Section 3
+       @State private var thirdTabText: String = "Third Tab"
+       
+    struct ProfileCell: View {
+        @Binding var profileCellTitle: String
+        var body: some View {
+            HStack {
+                TextField("Enter title", text: $profileCellTitle)
+                    .font(.title)
+                    .multilineTextAlignment(.center)
+                    .padding(.horizontal, 50)
+            }
+            .frame(height: 50)
+            .background(Color.white)
+            .cornerRadius(10)
+            .shadow(radius: 2)
+            .padding(.horizontal)
+        }
+    }
+    
+    
     var body: some View {
-        TabView {
+        TabView(selection: $selection) {
+            // Profile Tab
+            VStack {
+                ZStack {
+                    ProfileCell(profileCellTitle: $profileCellTitle)
+                        .onTapGesture {
+                            print("click")
+                            showListTab = true
+                        }
+                    Color.clear // add an invisible view to capture the tap gestures
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            showListTab = true
+                        }
+                }
+                Spacer()
+                HStack {
+                    Button("reset") {
+                        data = [["Cell 1"]]
+                        isSectionHidden = [false]
+                        profileCellTitle = "Profile Cell"
+                        if isSectionHidden.count > 1 {
+                            isSectionHidden.removeLast()
+                        }
+                        showListTab = true
+                    }
+                    .padding(.trailing, 50)
+                    Button("Update") {
+                        // Add your code to update the profile cell here
+                    }
+                }
+                .padding(.bottom, 10)
+                
+                Button("CREATE NEW CELL") {
+                    data.append(["Cell \(data.count + 1)"])
+                    isSectionHidden.append(false)
+                }
+            }
+            .frame(height: 100)
+            .background(Color.gray.opacity(0.2))
+            .cornerRadius(10)
+            .padding()
+            .tabItem {
+                Image(systemName: "person.fill")
+                Text("Profile")
+            }
+
+            
+            // List Tab
+            // List Tab
             VStack {
                 HStack {
                     Spacer()
@@ -38,9 +105,14 @@ struct ContentView: View {
                     ForEach(data.indices, id: \.self) { sectionIndex in
                         Section(header:
                                     Button(action: {
+                            
                             isSectionHidden[sectionIndex].toggle()
+                            selectedArrow = "\(arrow)"
+                            if arrow == ["▽"] {
+                                
+                            }
                         }, label: {
-                            Text("Section \(sectionIndex + 1)")
+                            Text("Section \(sectionIndex + 1) ")
                         })
                         ) {
                             ForEach(data[sectionIndex].indices, id: \.self) { rowIndex in
@@ -74,7 +146,14 @@ struct ContentView: View {
                     }
                     Button("Save") {
                         let savedData = data.flatMap { $0 }
-                        profileCellTitle = savedData.joined(separator: " | ")
+                        savedListData = savedData // store the saved data in a separate array
+                        selection = 0 // switch to Profile tab
+                    }
+                }
+                .onAppear {
+                    // update the profile cell title with the saved data if the List tab was previously selected
+                    if selection == 1 {
+                        profileCellTitle = savedListData.joined(separator: " | ")
                     }
                 }
                 Spacer()
@@ -91,27 +170,17 @@ struct ContentView: View {
                 Image(systemName: "list.dash")
                 Text("List")
             }
+
+            
+            // Documents Tab
             VStack {
                 Spacer()
-                List {
-                    TextField("Enter title", text: $profileCellTitle)
-                        .font(.title)
-                        .multilineTextAlignment(.center)
-                        .padding(.horizontal, 50)
-                }
+                Text("Third Tab")
                 Spacer()
-                Button("New Cell") {
-                    data = [["Cell 1"]]
-                    isSectionHidden = [false]
-                    profileCellTitle = "Profile Cell"
-                    if isSectionHidden.count > 1 {
-                        isSectionHidden.removeLast()
-                    }
-                }
             }
             .tabItem {
-                Image(systemName: "person.fill")
-                Text("Profile")
+                Image(systemName: "doc.fill")
+                Text("Documents")
             }
         }
     }
